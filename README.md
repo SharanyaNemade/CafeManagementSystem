@@ -1,6 +1,3 @@
-# CafeManagementSystem
-
-
 # ☕ Cafemgm – Cafe Management System
 
 A lightweight Spring Boot application to manage cafe menu items, built using **Spring Boot**, **Java 17**, and **RESTful APIs**. This serves as a foundational backend service for managing items in a cafe's inventory or menu list.
