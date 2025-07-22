@@ -1,0 +1,64 @@
+# .gitignore
+
+
+# ====================================
+# Java & Maven Build Artifacts
+# ====================================
+target/
+*.class
+*.jar
+*.war
+
+# Keep target folders inside src/main and src/test
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# ====================================
+# Eclipse / Spring Tool Suite (STS)
+# ====================================
+.apt_generated/
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans/
+.sts4-cache/
+
+# ====================================
+# IntelliJ IDEA
+# ====================================
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# ====================================
+# NetBeans
+# ====================================
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ====================================
+# Visual Studio Code
+# ====================================
+.vscode/
+
+# ====================================
+# OS-specific junk
+# ====================================
+.DS_Store
+Thumbs.db
+
+# ====================================
+# Environment and Secrets
+# ====================================
+.env
+.env.*
+*.log
+logs/
