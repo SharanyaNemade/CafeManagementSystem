@@ -1,0 +1,132 @@
+<html>
+
+
+<head>
+
+	<title>	Cafe-Shop </title>
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+	
+	
+</head>
+
+
+<body>
+
+
+
+<!--  ==========================================================================================================================================================================================   -->
+
+
+	 <!-- 18/7/2025 -->
+	 
+	 
+	 
+
+	<!-- <h1 th:text = "'Welcome ' + ${name} + ' to Cafe '"> </h1> -->
+	
+<!-- 	<h1 th:text = "'Product Name:' + ${item1.name} "> </h1>
+	<h1 th:text = "'Product Price:' + ${item1.price} "> </h1>
+	<h1 th:text = "'Product Rating:' + ${item1.rating} "> </h1>
+ -->
+ 
+ 
+
+
+
+<!--  ==========================================================================================================================================================================================   --> 
+
+
+
+
+	<!-- 22/7/2025 -->
+
+
+	
+	
+	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Sr.no</th>
+      <th scope="col">Coffee</th>
+      <th scope="col">Price</th>
+      <th scope="col">Rating</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+  
+      <tr th:each = "item,itr : ${items}">
+     
+      <td th:text = "${itr.index+1}"></td>
+      <td th:text = "${item.name}"></td>
+	  <td th:text = "${item.price}"> Price </td>
+	  <td th:text = "${item.rating}"> Rating </td>
+		
+		<td>
+			<a href = "" 
+			th:classappend = "${item.is_available ?  'btn btn-success bt-sm' : 'btn btn-secondary btn-sm'}"  
+			th:text = "${item.is_available ? 'Buy Now' : 'Notify Me'}"> </a>
+		</td>
+		
+		
+    </tr>
+  
+     </tbody>
+</table>
+
+
+
+
+	
+
+ 
+	
+	<!-- The th:* attributes (th:each, th:text, etc.) are Thymeleaf attributes. Thymeleaf is a Java-based server-side template engine used in Spring Boot and other Java web frameworks. -->
+	
+	
+	<!-- th stands for Thymeleaf namespace. The attributes prefixed with th: are processed by the Thymeleaf engine on the server side before sending HTML to the client. -->
+	
+	
+	<!-- Use th:* attributes whenever you want your HTML to be dynamic and rendered using server-side data in Spring Boot. -->
+	
+	
+	  <table border = "1" style = "border-collapse:collapse;   width : 50%; height: 400px; text-align: center"> 
+	<tr>
+		<th> Coffee </th>
+		<th> Price </th>
+		<th> Rating </th>
+		<th> Available </th>
+		
+	</tr>
+	
+
+	<tr th:each = "item : ${items}"> 			<!-- th:if = "${item.is_available} -->    <!-- condition if true then show --> 
+		<td th:text = "${item.name}"></td>
+		<td th:text = "${item.price}"> Price </td>
+		<td th:text = "${item.rating}"> Rating </td>
+		<td th:text = "${item.is_available}"> Available </td>	
+		
+		<td>
+			<button th:text = "${item.is_available ? 'Buy Now' : 'Notify Me'}">
+			
+			</button>
+		</td> 	
+		
+		
+		
+		
+	</tr>
+ </table>	
+	
+	
+	</body>
+	
+</html>
+
+
+
+<!--  ==========================================================================================================================================================================================   -->
